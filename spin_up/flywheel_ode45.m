@@ -38,7 +38,7 @@ err = abs(omega - omega_analytic);
 printf("Max error, ode45 vs piecewise analytic: %.6f rad/s (%.4f%% of peak)\n", ...
     max(err), max(err)/max(omega)*100);
 
-% --- plotting (yours, unchanged) ---
+% --- plotting ---
 plot(t, omega, 'LineWidth', 1.5);
 xline(t_cutoff, '--k', 'Motor cutoff');
 xlabel('Time (s)');

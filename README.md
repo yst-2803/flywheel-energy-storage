@@ -79,6 +79,10 @@ By 3 s the wheel is at steady speed, so the adaptive solver is taking long steps
 - **Six speeds give one piece of information.** A linear static simulation scales exactly with $\omega^2$, so the fit confirms the setup is behaving but one speed would give the same gradient.
 - **Yield only.** The limit is static yield with a factor of safety of 2. Fatigue and burst are not considered.
 
+## Use of AI
+
+The derivations and the maths are my own and are in [`notes/`](notes/). I had AI help with Octave syntax and with structuring the scripts.
+
 ## Files
 
 | Path | Contents |
