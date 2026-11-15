@@ -6,11 +6,11 @@ A second part models a flywheel being spun up by a motor, and checks Octave's `o
 
 ## Result
 
-| Design | Max safe speed (rad/s) | Moment of inertia (kg m²) | Energy at safe speed (kJ) |
-|---|---|---|---|
-| Solid disc | 1,713 | 0.0185 | 27.1 |
-| Spoked wheel | 1,113 | 0.0132 | 8.2 |
-| Tapered-edge disc | 2,024 | 0.0103 | 21.0 |
+| Design | Mass (kg) | Max safe speed (rad/s) | Moment of inertia (kg m²) | Energy at safe speed (kJ) | Energy per kg (kJ/kg) |
+|---|---|---|---|---|---|
+| Solid disc | 3.67 | 1,713 | 0.0185 | 27.1 | 7.4 |
+| Spoked wheel | 2.20 | 1,113 | 0.0132 | 8.2 | 3.7 |
+| Tapered-edge disc | 2.38 | 2,024 | 0.0103 | 21.0 | 8.8 |
 
 The tapered-edge disc can spin fastest, but it is also lighter, so it stores 78% of the solid disc's energy. Per kilogram it stores about 19% more (8.8 against 7.4 kJ/kg). Which design is better depends on whether the application is limited by mass.
 
@@ -37,13 +37,13 @@ The tapered-edge disc can spin fastest, but it is also lighter, so it stores 78%
 | Spoked wheel | $1.01 \times 10^{-4}$ |
 | Tapered-edge disc | $3.05 \times 10^{-5}$ |
 
-**Safe speed.** The material is AISI 1018 steel with the yield stress taken as 250 MPa. With a factor of safety of 2 the safe stress is 125 MPa, and
+**Safe speed.** The material is Fusion 360's Steel AISI 1018 106 HR, which has a yield strength of 250 MPa. With a factor of safety of 2 the safe stress is 125 MPa, and
 
 ```math
 \omega_{safe} = \sqrt{\frac{\sigma_{safe} - c}{k}}
 ```
 
-**Energy.** $E = \tfrac{1}{2} I \omega_{safe}^2$, with each design's moment of inertia taken from Fusion 360.
+**Energy.** $E = \tfrac{1}{2} I \omega_{safe}^2$, with each design's mass and moment of inertia taken from Fusion 360.
 
 ## Spin-up model
 
